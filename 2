@@ -1,0 +1,47 @@
+#1. Алгоритм с сложностью O(3n):
+
+def algorithm_O_3n(arr):
+    n = len(arr)
+    result = []
+
+    for _ in range(3):
+        for i in range(n):
+            result.append(arr[i])
+
+    return result
+
+#2. Алгоритм с сложностью O(n log n):
+
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        A = arr[0]
+        less = [x for x in arr[1:] if x <= a]
+        greater = [x for x in arr[1:] if x > a]
+        return quicksort(less) + [a] + quicksort(greater)
+
+#3. Алгоритм с сложностью O(n!):
+
+from itertools import permutations
+def all_permutations(arr):
+    return list(permutations(arr))  
+
+#4. Алгоритм с сложностью O(n^3):
+
+def cubic_algorithm(arr):
+    n = len(arr)
+    result = []
+
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                result.append(arr[i] + arr[j] + arr[k])
+
+    return result
+
+#5. Алгоритм с сложностью O(3 log n):
+
+import math
+def log3_algorithm(n):
+    return 3 * math.log(n, 2)
